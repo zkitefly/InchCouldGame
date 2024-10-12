@@ -1,4 +1,4 @@
-apply("./secret.gradle.kts")
+// apply("./secret.gradle.kts")
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
