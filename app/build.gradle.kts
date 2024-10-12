@@ -20,16 +20,16 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    signingConfigs {
-        create("release") {
-            @Suppress("UNCHECKED_CAST")
-            fun <T> ext(key: String) = rootProject.extra[key] as T
-            storeFile = ext("storeFile")
-            storePassword = ext("storePassword")
-            keyAlias = ext("keyAlias")
-            keyPassword = ext("keyPassword")
-        }
-    }
+    // signingConfigs {
+    //     create("release") {
+    //         @Suppress("UNCHECKED_CAST")
+    //         fun <T> ext(key: String) = rootProject.extra[key] as T
+    //         storeFile = ext("storeFile")
+    //         storePassword = ext("storePassword")
+    //         keyAlias = ext("keyAlias")
+    //         keyPassword = ext("keyPassword")
+    //     }
+    // }
 
     buildTypes {
         release {
@@ -38,11 +38,11 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs["release"]
+            // signingConfig = signingConfigs["release"]
         }
         debug {
             isMinifyEnabled = false
-            signingConfig = signingConfigs["release"]
+            // signingConfig = signingConfigs["release"]
         }
     }
     compileOptions {
